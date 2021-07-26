@@ -1,0 +1,17 @@
+executable = /usr/bin/cat
+arguments = file0.out file1.out file2.out
+
+should_transfer_files = YES
+transfer_input_files = file0.out, file1.out, file2.out
+
+log = $(JobBatchName).log
+output = result.out
+error = $(JobBatchName).err
+
+JobBatchName = MergeResults
+
+request_cpus = 1
+request_memory = 32MB
+request_disk = 512MB
+
+queue

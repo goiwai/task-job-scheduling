@@ -1,0 +1,5 @@
+# see more on DAG
+# https://htcondor.readthedocs.io/en/latest/users-manual/dagman-applications.html
+JOB CalcInput calc_input.submit
+SCRIPT PRE CalcInput /bin/bash create_input.sh
+SCRIPT POST CalcInput /bin/bash merge_results.sh

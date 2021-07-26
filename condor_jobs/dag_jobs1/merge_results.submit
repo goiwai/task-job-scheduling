@@ -1,0 +1,20 @@
+executable = /bin/bash
+arguments = merge_results.sh
+
+should_transfer_files = YES
+transfer_input_files = merge_results.sh, file0.out, file1.out, file2.out
+
+transfer_output_files = result.out
+when_to_transfer_output = ON_EXIT
+
+log = $(JobBatchName).log
+output = $(JobBatchName).out
+error = $(JobBatchName).err
+
+JobBatchName = MergeResults
+
+request_cpus = 1
+request_memory = 32MB
+request_disk = 512MB
+
+queue

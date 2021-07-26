@@ -1,0 +1,17 @@
+executable = /usr/bin/md5sum
+arguments = file$(num).in
+
+should_transfer_files = YES
+transfer_input_files = file$(num).in
+
+log = $(JobBatchName).log
+output = file$(num).out
+error = $(JobBatchName).err
+
+JobBatchName = CalcInput$(num)
+
+request_cpus = 1
+request_memory = 32MB
+request_disk = 512MB
+
+queue num in (0 1 2)
