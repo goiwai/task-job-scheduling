@@ -3,6 +3,13 @@
 *.log
 file[0-9].*
 file[0-9][0-9].*
+# some job examples create a pseudo data file and root files for output results
+random_pseudo.data
+na49.root
+hsimple.root
+fillrandom.root
+# intermid-files created by condor_submit_dag
+job.dag.*
 #
 # A list of pseudo input files for jobu submission tests
 # To create these files: ./create_input.sh 
