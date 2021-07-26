@@ -9,7 +9,7 @@ if test -f "$gitignore"; then
         of=$script_dir_/$f
         cmd="dd bs=$((1*1024*1024)) if=/dev/urandom of=\"$of\" count=16"
         echo $cmd
-        #eval $cmd
+        eval $cmd
     done
 fi
 
