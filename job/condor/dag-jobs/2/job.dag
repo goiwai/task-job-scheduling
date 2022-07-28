@@ -1,0 +1,7 @@
+# see more on DAG
+# https://htcondor.readthedocs.io/en/latest/users-manual/dagman-applications.html
+JOB CreateInput create-input.submit
+JOB CalcInput calc-input.submit
+JOB MergeResults merge-results.submit
+PARENT CreateInput CHILD CalcInput
+PARENT CalcInput CHILD MergeResults
