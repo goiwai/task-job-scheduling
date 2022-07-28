@@ -12,7 +12,7 @@ done
 
 # output into std.err
 kill 123456
-echo "This message should go into stderr." >&2
+echo "The message above should go into stderr." >&2
 
 # creates a 256 MiB of random psuedo data into the file named in "pseudo.data".
 cmd_to_create_file="dd bs=$((16*1024*1024)) if=/dev/urandom of=$output count=16"
