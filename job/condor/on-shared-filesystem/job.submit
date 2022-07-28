@@ -3,6 +3,7 @@ arguments = job.sh
 
 should_transfer_files = NO
 # transfer_input_files = job.sh
+universe = local
 
 # transfer_output_files = random_pseudo.data, hsimple.root
 # when_to_transfer_output = ON_EXIT
