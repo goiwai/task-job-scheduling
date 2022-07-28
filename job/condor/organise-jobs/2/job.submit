@@ -10,6 +10,6 @@ JobBatchName = CalcMD5
 
 request_cpus = 1
 request_memory = 32MB
-request_disk = 512MB
+request_disk = 128MB
 
 queue 3

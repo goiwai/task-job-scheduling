@@ -4,7 +4,6 @@ dir_at_exec_=$(cd . && pwd)
 
 if test $# -ne 1; then
     echo "$script_name_ <output_dir>" >&2
-    echo $#
     exit 1
 elif ! test -d $1; then
     mkdir -p $1
