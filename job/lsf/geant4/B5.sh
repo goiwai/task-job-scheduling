@@ -6,7 +6,7 @@ gcc_version=830
 module load gcc/$gcc_version
 
 source /sw/packages/geant4/$geant4_version/bin/geant4.sh
-cmake3 -DCMAKE_CXX_COMPILER=$(which g++) $(geant4-config --prefix)/share/Geant4-$(geant4-config --version)/examples/basic/B5
+cmake3 -DCMAKE_CXX_COMPILER=$(builtin command -v g++) $(geant4-config --prefix)/share/Geant4-$(geant4-config --version)/examples/basic/B5
 make
 
 ./exampleB5 run2.mac
