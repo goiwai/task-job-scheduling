@@ -1,0 +1,21 @@
+executable = /bin/bash
+arguments = job100-at-once.sh $(ClusterId).$(ProcId)
+# file$(ProcId).in file$(ProcId).out
+
+should_transfer_files = YES
+transfer_input_files = job100-at-once.sh, many-input-files
+
+transfer_output_files = $(ClusterId).$(ProcId)
+when_to_transfer_output = ON_EXIT
+
+log = job.log
+output = std.out
+error = std.err
+
+JobBatchName = CalcMD5
+
+request_cpus = 1
+request_memory = 32MB
+request_disk = 512MB
+
+queue 1

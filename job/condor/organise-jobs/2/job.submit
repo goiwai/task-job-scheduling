@@ -1,0 +1,15 @@
+executable = /usr/bin/md5sum
+arguments = file.in
+initialdir = $(ProcId)
+
+log = job.log
+output = std.out
+error = std.err
+
+JobBatchName = CalcMD5
+
+request_cpus = 1
+request_memory = 32MB
+request_disk = 128MB
+
+queue 3

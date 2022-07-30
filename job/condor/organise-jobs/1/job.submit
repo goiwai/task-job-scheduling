@@ -1,0 +1,21 @@
+executable = /bin/bash
+arguments = job.sh file$(ProcId).in $(ClusterId).$(ProcId)
+
+should_transfer_files = YES
+transfer_input_files = job.sh, input/file$(ProcId).in
+
+transfer_output_files = $(ClusterId).$(ProcId)
+transfer_output_remaps = "$(ClusterId).$(ProcId) = output/$(ClusterId).$(ProcId)"
+when_to_transfer_output = ON_EXIT
+
+log = log/$(ClusterId).$(ProcId)
+output = stdout/$(ClusterId).$(ProcId)
+error = stderr/$(ClusterId).$(ProcId)
+
+JobBatchName = CalcMD5
+
+request_cpus = 1
+request_memory = 32MB
+request_disk = 128MB
+
+queue 3

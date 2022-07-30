@@ -1,0 +1,19 @@
+executable = /usr/bin/dd
+arguments = bs=$$([16*1024*1024]) if=/dev/urandom of=file$(num).in count=1
+# should_transfer_files = YES
+# transfer_input_files = create-input.sh
+
+transfer_output_files = file$(num).in
+when_to_transfer_output = ON_EXIT
+
+log = $(JobBatchName).log
+output = $(JobBatchName).out
+error = $(JobBatchName).err
+
+JobBatchName = CreateInput$(num)
+
+request_cpus = 1
+request_memory = 32MB
+request_disk = 512MB
+
+queue num in (0 1 2)
