@@ -1,6 +1,6 @@
 # HTCondor
 
-[以下の順に解説を進めます。必要性の高そうな順に並べていますので飽きたら途中でやめて他の課題に取り組むとよろしいです。](https://wiki.kek.jp/pages/viewpage.action?pageId=214827458#TaskandJobScheduling%EF%BC%88SS2022%EF%BC%89-HTCondor)
+[以下の順に解説を進めます。必要性の高そうな順に並べていますので飽きたら途中でやめて他の課題に取り組むとよろしいです。](https://wiki.kek.jp/pages/viewpage.action?pageId=298123661#TaskandJobScheduling%EF%BC%88SS2023%EF%BC%89-HTCondor)
 
 1. [`hello-world`](hello-world): `echo hello world` するだけのジョブを投入し、標準出力、標準エラー出力、ジョブ情報ログを回収。
 2. [`simple-single-job`](simple-single-job): もう少しリソースを消費するジョブを投入。リソース（CPU・メモリ・ディスク容量）を要求するために必要な情報を得るための方法を紹介。
