@@ -1,5 +1,5 @@
 # Usage: bsub -cwd %J -o std.out -e std.err /bin/bash $PWD/B5.sh
-geant4_version=10.7.1
+geant4_version=11.0.2
 gcc_version=830
 
 . /etc/profile.d/modules.sh
