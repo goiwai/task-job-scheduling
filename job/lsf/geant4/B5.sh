@@ -1,14 +1,6 @@
 # Usage: bsub -cwd %J -o std.out -e std.err /bin/bash $PWD/B5.sh
-geant4_version=11.0.2
-gcc_version=830
-
-. /etc/profile.d/modules.sh
-module load gcc/$gcc_version
-
-source /sw/packages/geant4/$geant4_version/bin/geant4.sh
-cmake3 -DCMAKE_CXX_COMPILER=$(builtin command -v g++) $(geant4-config --prefix)/share/Geant4-$(geant4-config --version)/examples/basic/B5
+source /cvmfs/geant4.cern.ch/geant4/latest-ref/x86_64-el9-gcc11-optdeb/bin/geant4.sh
+cmake $(geant4-config --prefix)/share/Geant4/examples/basic/B5
 make
-
 ./exampleB5 run2.mac
-
 exit 0

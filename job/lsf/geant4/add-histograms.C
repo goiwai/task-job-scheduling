@@ -1,10 +1,10 @@
 // Usage: root [0] .x ../add-histograms.C
-void add_histograms() {
-  const Int_t njobs = 10;
+//        root [0] .x ../add-histograms.C(100)
+void add_histograms(Int_t njobs = 10) {
   TFile** file = new TFile*[njobs];
   TH1D** hist = new TH1D*[njobs];
   TCanvas* cv = new TCanvas();
-  cv->Divide(5,2);
+  TH1D* h = nullptr;
   for (Int_t i = 0; i < njobs; ++i) {
     TString dir = Form("%d", i+1);
     TString path = dir + TString("/file.root");
@@ -13,8 +13,7 @@ void add_histograms() {
     if (i > 0) {
       hist[i]->Add(hist[i-1]);
     }
-    cv->cd(i+1);
-    hist[i]->Draw();
+    h = hist[i];
   }
-  cv->cd(0);
+  h->Draw("H");
 }
