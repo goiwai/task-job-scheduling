@@ -1,6 +1,8 @@
-# HTCondor
+# Working with HTCondor
 
-[以下の順に解説を進めます。必要性の高そうな順に並べていますので飽きたら途中でやめて他の課題に取り組むとよろしいです。](https://wiki.kek.jp/pages/viewpage.action?pageId=393249399#TaskandJobScheduling%EF%BC%88SS2024%EF%BC%89-HTCondor)
+[Working with HTCondor (SS2025)](https://wiki.kek.jp/x/ZQWsH) 内で使用しているスクリプト類です。
+
+todo: append links below:
 
 1. [`hello-world`](hello-world): `echo hello world` するだけのジョブを投入し、標準出力、標準エラー出力、ジョブ情報ログを回収。
 2. [`simple-single-job`](simple-single-job): もう少しリソースを消費するジョブを投入。リソース（CPU・メモリ・ディスク容量）を要求するために必要な情報を得るための方法を紹介。
