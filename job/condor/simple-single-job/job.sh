@@ -11,8 +11,10 @@ for cmd in hostname pwd whoami; do
 done
 
 # output into std.err
-kill 123456
-echo "The message above should go into stderr." >&2
+cmd_kill="kill 123456"
+echo $cmd_kill
+eval $cmd_kill
+echo "The output message of the command above ($cmd_kill) goes into stderr." >&2
 
 # creates a 256 MiB of random psuedo data into the file named in "pseudo.data".
 cmd_to_create_file="dd bs=$((16*1024*1024)) if=/dev/urandom of=$output count=16"
@@ -24,9 +26,10 @@ eval $cmd_to_create_file
 # echo $cmd_to_stress
 # eval $cmd_to_stress
 
-# ROOT benchmarks
-cmd_root_benchmarks="root -b -l -q /usr/local/tutorials/benchmarks.C"
-echo $cmd_root_benchmarks
-eval $cmd_root_benchmarks
+# ROOT: generate hsimple.root file
+source /cvmfs/sft.cern.ch/lcg/app/releases/ROOT/6.36.00/x86_64-almalinux9.5-gcc115-opt/bin/thisroot.sh
+cmd_root_hsimple="root -b -l -q $ROOTSYS/tutorials/hsimple.C"
+echo $cmd_root_hsimple
+eval $cmd_root_hsimple
 
 exit 0
