@@ -19,7 +19,7 @@ error = std.err
 # queue: keyword indicating “create a job.”
 queue 1
 
-# $ condor_submit job.jdl && condor_q
+# $ condor_submit job.submit && condor_q
 # Submitting job(s).
 # 1 job(s) submitted to cluster 6.
 # -- Schedd: centos7 : <127.0.0.1:9618?... @ 06/17/19 14:20:45
