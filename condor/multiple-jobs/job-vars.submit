@@ -1,10 +1,10 @@
 executable = /bin/bash
-arguments = job.sh $(infile).in $(infile).out
+arguments = job.sh $(filebody).in $(filebody).out
 
 should_transfer_files = YES
-transfer_input_files = job.sh, $(infile).in
+transfer_input_files = job.sh, $(filebody).in
 
-transfer_output_files = $(infile).out
+transfer_output_files = $(filebody).out
 when_to_transfer_output = ON_EXIT
 
 log = $(ClusterId).$(ProcId).log
@@ -17,4 +17,4 @@ request_cpus = 1
 request_memory = 32MB
 request_disk = 512MB
 
-queue infile in (file0 file1 file2)
+queue filebody in (file0 file1 file2)
