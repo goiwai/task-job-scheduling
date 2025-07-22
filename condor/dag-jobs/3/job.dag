@@ -1,5 +1,5 @@
 # see more on DAG
 # https://htcondor.readthedocs.io/en/latest/users-manual/dagman-applications.html
 JOB CalcInput calc-input.submit
-SCRIPT PRE CalcInput /bin/bash create-input.sh
-SCRIPT POST CalcInput /bin/bash merge-results.sh
+SCRIPT DEBUG pre-script.log ALL PRE CalcInput /bin/bash create-input.sh
+SCRIPT DEBUG post-script.log ALL POST CalcInput /bin/bash merge-results.sh
