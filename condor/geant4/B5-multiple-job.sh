@@ -5,6 +5,7 @@ if test -d /.singularity.d; then
     export PATH=/cvmfs/sft.cern.ch/lcg/contrib/CMake/latest/Linux-x86_64/bin:$PATH
 else
     mkdir -p $WORKING_DIR && cd $WORKING_DIR || exit 1
+    source /cvmfs/geant4.cern.ch/geant4/latest-ref/x86_64-el9-gcc11-optdeb/bin/geant4.sh
 fi
 cmake $(geant4-config --prefix)/share/Geant4/examples/basic/B5
 make
