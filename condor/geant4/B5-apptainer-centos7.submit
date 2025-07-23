@@ -1,4 +1,4 @@
-# Usage: condor_submit B5-apptainer-centos7.submit -queue 10
+# Usage: condor_submit B5-apptainer-centos7.submit -queue 123
 executable = /bin/bash
 arguments = B5-apptainer-centos7.sh
 JobBatchName = B5-apptainer-centos7
