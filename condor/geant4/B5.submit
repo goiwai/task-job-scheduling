@@ -1,0 +1,31 @@
+executable = /bin/bash
+arguments = B5.sh
+JobBatchName = B5
+
+should_transfer_files = YES
+transfer_input_files = B5.sh
+
+transfer_output_files = $(ClusterId)
+when_to_transfer_output = ON_EXIT
+# HTCondor will transfer back all new and changed files (usually output) from the job.
+
+environment = "WORKING_DIR=$(ClusterId)/$(ProcId) CLUSTER_ID=$(ClusterId) PROCESS_ID=$(ProcId)"
+
+log = job.log
+output = $(ClusterId)/$(ProcId)/std.out
+error = $(ClusterId)/$(ProcId)/std.err
+
+# User time (seconds): 69.84
+# System time (seconds): 3.08
+# Percent of CPU this job got: 95%
+# Elapsed (wall clock) time (h:mm:ss or m:ss): 1:16.28
+# File system inputs: 8576
+# File system outputs: 25184
+# Memory usage: 336132 KB
+
+request_cpus = 1
+request_memory = 512MB
+request_disk = 32MB
+
+# queue: keyword indicating “create a job.”
+queue 1
