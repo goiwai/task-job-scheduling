@@ -12,3 +12,12 @@
 # specific
 trash/
 .DS_Store
+zzz*
+*.stderr
+*.stdout
+*.log
+hsimple.root
+log/
+output/
+stderr/
+stdout/

@@ -1,0 +1,31 @@
+executable = /bin/echo
+arguments = hello world
+
+# should_transfer_files = YES
+# transfer_input_files = job.sh
+
+# transfer_output_files = random_pseudo.data, hsimple.root
+# when_to_transfer_output = ON_EXIT
+# HTCondor will transfer back all new and changed files (usually output) from the job.
+
+log = job.log
+output = std.out
+error = std.err
+
+# request_cpus = 1
+# request_memory = 512MB
+# request_disk = 512MB
+
+# queue: keyword indicating “create a job.”
+queue 1
+
+# $ condor_submit job.submit && condor_q
+# Submitting job(s).
+# 1 job(s) submitted to cluster 6.
+# -- Schedd: centos7 : <127.0.0.1:9618?... @ 06/17/19 14:20:45
+# OWNER    BATCH_NAME    SUBMITTED   DONE   RUN    IDLE  TOTAL JOB_IDS
+# iwai     ID: 6        6/17 14:20      _      _      1      1 6.0
+# 6.0 is JobId = ClusterId.ProcId
+
+# resource estimation:
+# /usr/bin/time -o time.out --verbose /bin/bash job.sh

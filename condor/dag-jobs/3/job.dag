@@ -1,0 +1,4 @@
+# See also: https://htcondor.readthedocs.io/en/latest/automated-workflows/dagman-introduction.html#scripts
+JOB CalcInput calc-input.submit
+SCRIPT DEBUG pre-script.log ALL PRE CalcInput /bin/bash create-input.sh
+SCRIPT DEBUG post-script.log ALL POST CalcInput /bin/bash merge-results.sh
