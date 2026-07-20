@@ -1,9 +1,9 @@
-# 計算機クラスター（SS2025）
+# 計算機クラスター（SS2026）
 
-[第八回粒子物理コンピューティングサマースクール（PPCC-SS-2025）](https://wiki.kek.jp/display/PPCC/PPCC-SS-2025) で使用する教材の一部です。
+[第八回粒子物理コンピューティングサマースクール（PPCC-SS-2026）](https://wiki.kek.jp/display/PPCC/PPCC-SS-2026) で使用する教材の一部です。
 
 以下のガイドに沿って進めてください。
 
-- [Working with LSF (SS2025)](https://wiki.kek.jp/x/JwGtH): KEKCCにアカウントがある人でLSFを使う方向け (⚠️ 要KEKCC アカウント: <https://ccportal.kek.jp/>)
-- [Working with HTCondor (SS2025)](https://wiki.kek.jp/x/ZQWsH): KEKCCにアカウントはないがジョブスケジューラ ([HTCondor](https://htcondor.readthedocs.io/en/latest/users-manual/quick-start-guide.html)) に興味のある方向け
-- [Scheduling task with cron and at (SS2025)](https://wiki.kek.jp/x/IwGtH): おまけ (定期的に実行するタスク管理について紹介しています)
+- [Working with LSF (SS2026)](https://wiki.kek.jp/x/1AKuIg): KEKCCにアカウントがある人でLSFを使う方向け (⚠️ 要KEKCC アカウント: <https://ccportal.kek.jp/>)
+- [Working with HTCondor (SS2026)](https://wiki.kek.jp/x/5QKuIg): KEKCCにアカウントはないがジョブスケジューラ ([HTCondor](https://htcondor.readthedocs.io/en/latest/users-manual/quick-start-guide.html)) に興味のある方向け
+- [Scheduling task with cron and at (SS2026)](https://wiki.kek.jp/x/8gKuIg): おまけ (定期的に実行するタスク管理について紹介しています)
