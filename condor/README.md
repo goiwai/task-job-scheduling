@@ -4,7 +4,7 @@
 
 1. [`hello-world`](hello-world): [`echo hello world` するだけのジョブを投入し、標準出力、標準エラー出力、ジョブ情報ログを回収します。](https://wiki.kek.jp/x/5QKuIg#WorkingwithHTCondor(SS2026)-hello-world)
 2. [`simple-single-job`](simple-single-job): [もう少しリソースを消費するジョブを投入。リソース（CPU・メモリ・ディスク容量）を要求するために必要な情報を得るための方法もあわせて紹介します。](https://wiki.kek.jp/x/5QKuIg#WorkingwithHTCondor(SS2026)-simple-single-job)
-3. [`on-shared-filesystem`](on-shared-filesystem): [ジョブ投入ホストとジョブ実行ホストの間で共有ファイルシステムが展開されている環境下で利用できる Job Description File の例を紹介します。](https://wiki.kek.jp/x/5QKuIg#WorkingwithHTCondor(SS2026)-on-shared-filesystem) :warning: 演習用の環境はジョブ投入ホストとジョブ実行ホスト間に共有ファイルシステムが導入されていません。
+3. [`on-shared-filesystem`](on-shared-filesystem): [ジョブ投入ホストとジョブ実行ホストの間で共有ファイルシステムが展開されている環境下で利用できる Job Description File の例を紹介します。](https://wiki.kek.jp/x/5QKuIg#WorkingwithHTCondor(SS2026)-on-shared-filesystem) :bulb: 今回のMDX演習環境と同様に `/home` 等が共有されており、ジョブ実行前後でジョブ投入ホスト〜ジョブ実行ホスト間で入出力ファイルの転送が必要ないケースにおいて有効です。
 4. [`multiple-jobs`](multiple-jobs): [ジョブにパラメータを与えて投入し、結果をパラメータごとに分けるための手法をいくつか紹介します。](https://wiki.kek.jp/x/5QKuIg#WorkingwithHTCondor(SS2026)-multiple-jobs)
 5. [`organise-jobs`](organise-jobs) ジョブ投入を繰り返すうちに散らかってしまいがちな Working Directory の整理整頓術を紹介します。
    5-1. [`1`](organise-jobs/1): [ファイル種別毎に整理する](https://wiki.kek.jp/x/5QKuIg#WorkingwithHTCondor(SS2026)-organise-jobs/1(ファイル種別毎に整理整頓))
