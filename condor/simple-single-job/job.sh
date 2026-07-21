@@ -6,8 +6,8 @@ output=$dir_at_exec_/random_pseudo.data
 
 # output into std.out
 for cmd in hostname pwd whoami; do
-    echo "cmd=$cmd"
-    eval $cmd
+  echo "cmd=$cmd"
+  eval $cmd
 done
 
 # output into std.err
